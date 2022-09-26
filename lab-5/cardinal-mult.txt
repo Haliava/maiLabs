@@ -1,0 +1,76 @@
+00, ,<,NUM2
+
+
+// перемещаем головку в начало ленты
+
+
+NUM2,|,<,NUM2 // сначала пропускаем второе число
+NUM2, ,<,NUM1 
+
+NUM1,|,<,NUM1 // затем пропускаем первое число
+NUM1, ,>,START
+
+
+// забираем одну | из первого числа
+
+
+START,|, ,START
+START, ,>,go_through_num1
+
+go_through_num1,|,>,go_through_num1
+go_through_num1, ,>,copy_num2
+
+
+// копируем второе число
+
+
+copy_num2_pre,|,>,copy_num2 // при вставке | после копирования надо переместиться на одну клетку вправо
+
+copy_num2,|, ,skip_num2_2 
+skip_num2_2, ,>,skip_num2 // забираем | и переносим её в итоговое число
+
+skip_num2,|,>,skip_num2
+skip_num2, ,>,insert_nums
+
+insert_nums, ,|,temp
+insert_nums,|,>,insert_nums
+
+temp,|,<,temp
+temp, ,<,return_to_num2_pre // вставили |, возвращаемся обратно
+
+return_to_num2_pre, ,|,back_to_num2
+return_to_num2_pre,|,<,return_to_num2
+
+return_to_num2,|,<,return_to_num2
+return_to_num2, ,|,copy_num2_pre
+
+
+// возвращаемся к первому числу и делаем ещё одну итерацию
+
+
+back_to_num2,|,<,back_to_num2
+back_to_num2, ,<,pre_back_to_start
+
+pre_back_to_start,|,<,back_to_start
+back_to_start,|,<,back_to_start
+back_to_start, ,|,START_pre
+
+START_pre,|,>,START
+
+
+// конец
+
+
+// если вместо первой | после пробела идёт " ", это значит, что умножение было произведено т.к. программа идёт слева направо 
+pre_back_to_start, ,|,END1 // переходим в самую правую ячейку ленты для завершения программы
+END1,|,>,END1
+END1, ,>,END2
+
+END2,|,>,END2
+END2, ,>,END3
+
+END3,|,>,END3
+END3, ,#,END3
+
+
+
