@@ -12,6 +12,7 @@
 | [`lab-3`](https://github.com/Haliava/maiLabs/tree/master/lab-3) | Взаимодейсвие с сервером в UNIX |
 | [`lab-5`](https://github.com/Haliava/maiLabs/tree/master/lab-5) | Машины Тьюринга |
 | [`lab-6`](https://github.com/Haliava/maiLabs/tree/master/lab-6) | Диаграммы Тьюринга |
+| [`lab-7`](https://github.com/Haliava/maiLabs/tree/master/lab-7) | Алгоритмы Маркова |
 
 :grimacing: названия папок кликабельны
 
