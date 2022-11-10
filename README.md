@@ -13,6 +13,8 @@
 | [`lab-5`](https://github.com/Haliava/maiLabs/tree/master/lab-5) | Машины Тьюринга |
 | [`lab-6`](https://github.com/Haliava/maiLabs/tree/master/lab-6) | Диаграммы Тьюринга |
 | [`lab-7`](https://github.com/Haliava/maiLabs/tree/master/lab-7) | Алгоритмы Маркова |
+| [`lab-8`](https://github.com/Haliava/maiLabs/tree/master/lab-8) | Введение в Си (27 задание из ЕГЭ) |
+| [`lab-9`](https://github.com/Haliava/maiLabs/tree/master/lab-9) | Точка на области |
 
 :grimacing: названия папок кликабельны
 
