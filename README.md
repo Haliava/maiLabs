@@ -15,6 +15,8 @@
 | [`lab-7`](https://github.com/Haliava/maiLabs/tree/master/lab-7) | Алгоритмы Маркова |
 | [`lab-8`](https://github.com/Haliava/maiLabs/tree/master/lab-8) | Введение в Си (27 задание из ЕГЭ) |
 | [`lab-9`](https://github.com/Haliava/maiLabs/tree/master/lab-9) | Точка на области |
+| [`lab-10`](https://github.com/Haliava/maiLabs/tree/master/lab-10) | Виды ошибок в Си |
+| [`lab-11`](https://github.com/Haliava/maiLabs/tree/master/lab-11) | Конечные автоматы |
 
 :grimacing: названия папок кликабельны
 
