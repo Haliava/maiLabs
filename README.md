@@ -19,8 +19,8 @@
 | [`lab-11`](https://github.com/Haliava/maiLabs/tree/master/lab-11) | Конечные автоматы |
 | [`lab-12`](https://github.com/Haliava/maiLabs/tree/master/lab-12) | Работа с числами |
 | [`lab-13`](https://github.com/Haliava/maiLabs/tree/master/lab-13) | Работа с множествами |
-| [`lab-14`](https://github.com/Haliava/maiLabs/tree/master/lab-14) | Что-то |
-| [`lab-15`](https://github.com/Haliava/maiLabs/tree/master/lab-15) | Что-то |
+| [`lab-14`](https://github.com/Haliava/maiLabs/tree/master/lab-14) | Обход матриц |
+| [`lab-15`](https://github.com/Haliava/maiLabs/tree/master/lab-15) | Обработка матриц |
 
 :grimacing: названия папок кликабельны
 
