@@ -14,39 +14,39 @@ int64_t factorial(int64_t n) {
 }
 
 long double func(long double x) {
-    return (x * x / 4 + x / 2 + 1) * expl(x * x);
+    return (x * x / 4 + x / 2 + 1) * expl(x / 2);
 }
 
 long double getTaylorSeries(long double x, int64_t n) {
-    return ((long double) (n * n + 1)) / (long double) factorial(n) * powl(x / 2, n);;
+    return ((long double) (n * n + 1)) / ((long double) factorial(n)) * powl(x / 2, n);
 }
 
 int main() {
-    setlocale(LC_ALL, "Russian");
-
-    long double sum = 0;
+    long double sum = 0.0;
     double a = 0.1;
     double b = 0.6;
 
     int64_t n;
     scanf_s("%lld", &n);
-    printf("\n");
+    printf("N = %lld\n", n);
+    printf("Machine epsilon is equal to: %g\n", LDBL_EPSILON);
 
     printf("Table for values of Taylor series and of base function\n");
     printf("________________________________________________________________________\n");
-    printf("|   x   |          sum         |        f(x)          |number of iterations |\n");
+    printf("|   x   |          sum       |        f(x)        |number of iterations |\n");
     printf("________________________________________________________________________\n");
 
-    long double currentX = a;
+    long double currentX;
     long double step = (b - a) / (long double) n;
-    for (int64_t i = 0; i <= n + 1; ++i) {
-        currentX += step * (long double) i;
+    for (int64_t i = 0; i <= n; ++i) {
+        currentX = a + step * (long double) i;
         sum += getTaylorSeries(currentX, i);
+        if (getTaylorSeries(currentX, i) < LDBL_EPSILON) break;
 
-        printf("| %.3Lf | %.18Lf | %.18Lf |      %lld       |\n", currentX, sum, func(currentX), i);
+        printf("| %.3Lf | %.16Lf | %.16Lf |      %lld       |\n", currentX, sum, func(currentX), i);
         printf("________________________________________________________________________\n");
 
-        if (getTaylorSeries(currentX, i) < FLT_EPSILON) break;
+        if (fabsl(func(currentX) - getTaylorSeries(currentX, i)) < LDBL_EPSILON) break;
     }
 
     return 0;
