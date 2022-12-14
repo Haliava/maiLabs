@@ -1,4 +1,3 @@
-#include <locale.h>
 #include <stdio.h>
 #include <float.h>
 #include <stdint.h>
@@ -18,13 +17,17 @@ long double func(long double x) {
 }
 
 long double getTaylorSeries(long double x, int64_t n) {
-    return ((long double) (n * n + 1)) / ((long double) factorial(n)) * powl(x / 2, n);
+    long double res = 0;
+    for (int64_t i = 0; i <= n; ++i)
+        res += (((long double) (i * i + 1)) / ((long double) factorial(i))) * powl(x / 2, (long double) i);
+
+    return res;
 }
 
 int main() {
     long double sum = 0.0;
-    double a = 0.1;
-    double b = 0.6;
+    long double a = 0.1;
+    long double b = 0.6;
 
     int64_t n;
     scanf_s("%lld", &n);
@@ -38,15 +41,14 @@ int main() {
 
     long double currentX;
     long double step = (b - a) / (long double) n;
-    for (int64_t i = 0; i <= n; ++i) {
+    for (int64_t i = 1; i <= n; ++i) {
         currentX = a + step * (long double) i;
-        sum += getTaylorSeries(currentX, i);
-        if (getTaylorSeries(currentX, i) < LDBL_EPSILON) break;
+        sum = getTaylorSeries(currentX, i);
 
         printf("| %.3Lf | %.16Lf | %.16Lf |      %lld       |\n", currentX, sum, func(currentX), i);
         printf("________________________________________________________________________\n");
 
-        if (fabsl(func(currentX) - getTaylorSeries(currentX, i)) < LDBL_EPSILON) break;
+        if (fabsl(func(currentX) - sum) < LDBL_EPSILON) break;
     }
 
     return 0;
