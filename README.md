@@ -2,7 +2,7 @@
 
 Здесь располагаются все лабораторные работы, которые я сделал и буду делать
 
-<details open>
+<details>
 <summary>Список лаб на первый сем</summary>
 <br>
 
@@ -26,3 +26,14 @@
 
 </details>
 
+<details>
+<summary>Список лаб на второй сем</summary>
+<br>
+
+| **Название папки** | **Тема лабы** |
+| ------ | ------ |
+| [`lab-2`](https://github.com/Haliava/maiLabs/tree/master/lab-2) | Введение в UNIX |
+
+:grimacing: названия папок кликабельны
+
+</details>
