@@ -46,7 +46,7 @@ int main() {
 
     long double ans25 = iterativeSearch(0, 1);
 
-    printf("#25 - x0: %Lf, x: %Lf", x24, ans24, x25, ans25);
+    printf("#25 - x0: %Lf, x: %Lf", x25, ans25);
 
     return 0;
 }
